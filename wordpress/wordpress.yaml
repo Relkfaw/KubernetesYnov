@@ -20,6 +20,7 @@ metadata:
   name: wordpress-persisvolumeclaim
   labels:
     app: wordpress
+    tier: front
 spec:
   accessModes:
     - ReadWriteOnce
@@ -37,6 +38,7 @@ metadata:
     app: wordpress
   name: wordpress
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: wordpress
