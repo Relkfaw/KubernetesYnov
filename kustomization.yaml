@@ -1,0 +1,5 @@
+resources:
+- namespace_wordpress.yaml
+- config-wordpress.yaml
+- mysql.yaml
+- wordpress.yaml
