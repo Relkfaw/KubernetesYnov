@@ -20,8 +20,9 @@ Ce namespace contenant la base de données KubeDB, il n'a pas besoin de beaucoup
 
 #### Ressources maximales:
   * 2 CPU
-  * 1536 Mi de mémoire
+  * 50Gi de mémoire
 
 #### Pourquoi?
 Ce namespace contenant le pod Wordpress, il lui faut des ressources processeur en grande quantité afin de charger rapidement l'interface graphique du site.
 Malgré tout, il doit pouvoir générer les pages riches en images ou vidéos, d'où la limite en mémoire élevée.
+De plus, il devra contenir les données et backup du wordpress et de MySQL.

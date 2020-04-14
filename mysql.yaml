@@ -26,6 +26,7 @@ spec:
   resources:
     requests:
       storage: 250Mi
+  storageClassName: local-storage
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -46,7 +47,7 @@ spec:
         tier: mysql
     spec:
       containers:
-        - image: mysql
+        - image: mysql:8.0
           name: mysql
           env:
             - name: WORDPRESS_DB_PASSWORD
@@ -63,4 +64,4 @@ spec:
       volumes:
         - name: mysql-volume
           persistentVolumeClaim:
-            claimName: mysql-persisvolumeclain
+            claimName: mysql-persisvolumclaim

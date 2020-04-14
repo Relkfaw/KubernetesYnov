@@ -1,5 +1,7 @@
 resources:
 - namespace_wordpress.yaml
+- wp-quota.yaml
+- storageClass.yaml
 - config-wordpress.yaml
 - mysql.yaml
 - wordpress.yaml
